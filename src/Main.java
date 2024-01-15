@@ -11,10 +11,10 @@ public class Main {
         bestFormateur.add("Lea");
         bestFormateur.add("Blanca");
 
-        for (int i = 0; i < bestFormateur.size(); i++) {
+        for (String s : bestFormateur) {
 
-            int nombreCaracteres = bestFormateur.get(i).length();
-            System.out.println(("Nombre de caractères dans \"" + bestFormateur.get(i) + "\": " + nombreCaracteres));
+            int nombreCaracteres = s.length();
+            System.out.println(("Nombre de caractères dans \"" + s + "\": " + nombreCaracteres));
         }
     }
 
