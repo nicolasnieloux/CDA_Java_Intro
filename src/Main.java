@@ -15,5 +15,13 @@ public class Main {
             System.out.println("i = " + i);
             i++;
         }
+
+
+        // une boucle for, qui affiche tous les nombres de 1 à 100.
+
+        for (int j=1; j<=100; j++){
+            System.out.println("j = " +j);
+        }
+
     }
 }
