@@ -4,12 +4,16 @@ public class Main {
     public static void main(String[] args) {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        System.out.println("Exercice 1 - Suites de nombres simples");
 
-        for (int i = 1; i <= 5; i++) {
+        // une boucle while, qui affiche tous les nombres de 1 à 100.
+        int i = 1;
+
+        while (i<=100) {
             //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
             // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
             System.out.println("i = " + i);
+            i++;
         }
     }
 }
