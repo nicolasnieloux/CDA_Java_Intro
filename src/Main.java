@@ -14,7 +14,13 @@ public class Main {
         for (String s : bestFormateur) {
 
             int nombreCaracteres = s.length();
-            System.out.println(("Nombre de caractères dans \"" + s + "\": " + nombreCaracteres));
+            if (nombreCaracteres >= 4) {
+                System.out.println(("Nombre de caractères dans \"" + s + "\": " + nombreCaracteres));
+            }
+        }
+
+        for (String s : bestFormateur) {
+            System.out.println(s.toUpperCase());
         }
     }
 
