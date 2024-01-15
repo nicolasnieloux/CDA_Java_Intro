@@ -1,15 +1,33 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
+    static void decrypt(String sentence) {
+        String decryptedMessage = sentence.replaceAll("0","");
+        System.out.println(decryptedMessage);
+    }
     public static void main(String[] args) {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        System.out.println("Exercice 5 - Message caché");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+      String message ="000T000000000000000000000000000000o0000u00000000000j0o0000000u0000000000r00s0000\n" +
+              "c00o0000d00000e000000000000r000000000000000000\n" +
+              "00000c0000000000o000m00000000000000m0e000 000000000s00i0000000000 0l000e00000000\n" +
+              "g000000000000a00000000000000000r0s0000\n" +
+              "000000000000000000000000000q00000u0000000000000000000000000i00000000\n" +
+              "000f000i0ni00000r0000000a 000p00000a00000r0000000000000000000000000000000m00000000000000a000in0t000000e00n000000000i00r0000000000000000\n" +
+              "00000000000v00000000000o0000000t00r0000000e000000000 0c000o00d000000000e000000000\n" +
+              "00e0000000000000000000000000000000000s0t0000000000000000000 0000000000000u0n00000\n" +
+              "0000000000000000000000000000000ps00000000y000000000000000000c0h0000000op00000a0t000\n" +
+              "0h0e0\n" +
+              "000000000000000v00000000000i00000000000000000000000000000000000000o0000l0000en00t\n" +
+              "0000000q0u000000000i 00000000sa00000it00000 000où0000000000\n" +
+              "000000v0000000o0000000000u000000000000000s000000000000000000\n" +
+              "00000v00000000000000i00000000v0000000000000000000000000000e0000000000z0000000\n" +
+              "00(000000c0i0000000000000000000ta0ti0o00000000n 000000d000000000000000000e00\n" +
+              "00J000o00000000000000h0n00 0W00o000000000000o00000000000d0000000s0000000000)0.";
+
+decrypt(message);
+
     }
 }
