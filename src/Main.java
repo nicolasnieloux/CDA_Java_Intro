@@ -14,6 +14,15 @@ public class Main {
         return inputUser.nextInt();
     }
 
+    static float getInputUser2() {
+        System.out.println("Exercice 2 - Suite de Fibonacci");
+
+        Scanner inputUser = new Scanner(System.in);
+        System.out.println("Entrer un epsilon");
+
+        return inputUser.nextFloat();
+    }
+
     static ArrayList<Integer> getFibonacciArrayList(int inputUser) {
         ArrayList<Integer> fibonacciArrayList = new ArrayList<>();
         fibonacciArrayList.add(0);
@@ -24,12 +33,39 @@ public class Main {
         return fibonacciArrayList;
     }
 
+    static ArrayList<Integer> getApproxiamationFibo(float epsilon) {
+        float phi = (float) (1 + Math.sqrt(5)) / 2;
+        ArrayList<Integer> fibonacciArrayList = new ArrayList<>();
+        ArrayList<Integer> fiboNumber = new ArrayList<>();
+        fibonacciArrayList.add(0);
+        fibonacciArrayList.add(1);
+        fibonacciArrayList.add(1);
+        fibonacciArrayList.add(2);
+        int i = 4;
+
+        do {
+            fibonacciArrayList.add(i, fibonacciArrayList.get(i - 2) + fibonacciArrayList.get(i - 1));
+            if ((float) (Math.abs((float) fibonacciArrayList.get(i - 1) / fibonacciArrayList.get(i - 2) - phi)) <= epsilon) {
+                fiboNumber.add(fibonacciArrayList.get(i - 1));
+                fiboNumber.add(fibonacciArrayList.get(i - 2));
+                return fiboNumber;
+            }
+            i++;
+
+        } while (fiboNumber.isEmpty());
+        return fiboNumber;
+    }
+
     public static void main(String[] args) {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
         System.out.println("Suite de Fibonacci!");
+
         int inputUser = getInputUser();
         System.out.println(getFibonacciArrayList(inputUser));
+
+        float inputUser2 = getInputUser2();
+        System.out.println(getApproxiamationFibo(inputUser2));
 
     }
 }
