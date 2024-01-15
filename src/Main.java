@@ -4,7 +4,7 @@ import java.util.Scanner;//TIP To <b>Run</b> code, press <shortcut actionId="Run
 public class Main {
 
     static int getInputUser() {
-        System.out.println("Exercice 1 - Suites de nombres simples");
+        System.out.println("Exercice 2 - Suites de nombres");
 
         Scanner inputUser = new Scanner(System.in);
         System.out.println("Entrer un nombre entier");
@@ -17,14 +17,20 @@ public class Main {
         return lowestNumber*lowestNumber;
     }
 
+    static int findTheHighestInt(int number){
+        int highestNumber = (int) Math.floor(Math.sqrt(number));
+        return highestNumber*highestNumber;
+    }
+
     public static void main(String[] args) {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
         System.out.println("Exercice 2");
         int intputUser = getInputUser();
-        int result = findTheLowestInt(intputUser);
-        System.out.println("Le plus petit carré est : " +result);
-
+        int resultLow = findTheLowestInt(intputUser);
+        int resultHigh = findTheHighestInt(intputUser);
+        System.out.println("Le plus petit carré supérieur est : " +resultLow);
+        System.out.println("Le plus grand carré inférieur est : " +resultHigh);
     }
 }
 
