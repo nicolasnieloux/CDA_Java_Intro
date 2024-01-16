@@ -37,22 +37,19 @@ public class Main {
         float phi = (float) (1 + Math.sqrt(5)) / 2;
         ArrayList<Integer> fibonacciArrayList = new ArrayList<>();
         ArrayList<Integer> fiboNumber = new ArrayList<>();
-        fibonacciArrayList.add(0);
+
         fibonacciArrayList.add(1);
         fibonacciArrayList.add(1);
         fibonacciArrayList.add(2);
-        int i = 4;
+        int i = fibonacciArrayList.size();
 
         do {
             fibonacciArrayList.add(i, fibonacciArrayList.get(i - 2) + fibonacciArrayList.get(i - 1));
-            if ((float) (Math.abs((float) fibonacciArrayList.get(i - 1) / fibonacciArrayList.get(i - 2) - phi)) <= epsilon) {
-                fiboNumber.add(fibonacciArrayList.get(i - 1));
-                fiboNumber.add(fibonacciArrayList.get(i - 2));
-                return fiboNumber;
-            }
             i++;
+        } while ((Math.abs((float) fibonacciArrayList.get(i - 1) / fibonacciArrayList.get(i - 2) - phi)) > epsilon);
 
-        } while (fiboNumber.isEmpty());
+        fiboNumber.add(fibonacciArrayList.get(i - 1));
+        fiboNumber.add(fibonacciArrayList.get(i - 2));
         return fiboNumber;
     }
 
